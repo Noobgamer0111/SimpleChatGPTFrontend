@@ -15,7 +15,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 def chat():
     user_input = request.json.get('message')
     response = openai.Completion.create(
-        engine="davinci",
+        engine="gpt-4o-mini",
         prompt=user_input,
         max_tokens=100
     )
